@@ -162,7 +162,10 @@ function initGame() {
 }
 
 function loadQuestion() {
+  currentQuestion = Math.floor(Math.random() * questions.length);
   questionText.textContent = questions[currentQuestion].question;
+  answerInput.value = "";
+  feedback.textContent = "";
 }
 
 function submitAnswer() {
@@ -172,6 +175,7 @@ function submitAnswer() {
   if (userAnswer.includes(correctAnswer)) {
     feedback.textContent = "✅ Correct! You may now buy/sell players.";
     feedback.style.color = "lightgreen";
+    loadQuestion(); // Load next question
   } else {
     feedback.textContent = "❌ Incorrect. Try again.";
     feedback.style.color = "red";
@@ -282,6 +286,7 @@ function updateLeagueTable() {
 
 // --- Start Game ---
 initGame();
+
 
 
 
