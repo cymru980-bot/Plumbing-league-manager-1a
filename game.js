@@ -18,18 +18,67 @@ const players = [
 
 // --- Plumbing Questions ---
 const questions = [
-  {
-    question: "What is the minimum pipe size for a cold feed to a hot water cylinder?",
-    answer: "22mm"
-  },
-  {
-    question: "What is the purpose of a sacrificial anode in a hot water cylinder?",
-    answer: "prevent corrosion"
-  },
-  {
-    question: "What is the recommended temperature for storing hot water to prevent Legionella?",
-    answer: "60°C"
-  }
+  // Cold Water Systems
+  { question: "What is the minimum depth for installing a cold water supply pipe underground?", answer: "750mm" },
+  { question: "What is the maximum depth for a cold water supply pipe?", answer: "1350mm" },
+  { question: "What is the purpose of a sacrificial anode in a hot water cylinder?", answer: "prevent corrosion" },
+  { question: "What is the recommended temperature for storing hot water to prevent Legionella?", answer: "60°C" },
+  { question: "What is the function of an RPZ valve?", answer: "prevent backflow" },
+  { question: "What is the standard pipe size for a rising main in a 3-bedroom house?", answer: "15mm" },
+  { question: "Convert 30 l/m into l/s.", answer: "0.5" },
+  { question: "Convert 0.25 l/s into l/m.", answer: "15" },
+  { question: "Convert 12 l/m into l/s.", answer: "0.2" },
+  { question: "Convert 0.12 l/s into l/m.", answer: "7.2" },
+  { question: "What is the role of a float-operated valve in a cistern?", answer: "maintain water level" },
+  { question: "What is the recommended clearance above a cistern for maintenance?", answer: "350mm" },
+  { question: "What is the weight of 230 litres of water?", answer: "230kg" },
+  { question: "What is the purpose of a screened overflow pipe?", answer: "prevent contamination" },
+  { question: "What is the function of a service valve?", answer: "isolate supply" },
+  { question: "What is the role of a drain-off valve?", answer: "drain system" },
+  { question: "What is the recommended insulation for cistern platforms?", answer: "moisture-resistant plywood" },
+  { question: "What is the purpose of a pressure transducer in boosted systems?", answer: "monitor pressure" },
+  { question: "What is the minimum pipe size for cold distribution to a bath?", answer: "22mm" },
+  { question: "What is the function of a check valve?", answer: "prevent reverse flow" },
+
+  // Hot Water Systems
+  { question: "What is the maximum temperature allowed for water discharged from a bath tap in new builds?", answer: "48°C" },
+  { question: "What is the minimum size of discharge pipework for a temperature relief valve with a ½-inch BSP outlet?", answer: "15mm" },
+  { question: "What is the purpose of a secondary return circuit?", answer: "maintain hot water circulation" },
+  { question: "Name two types of shower pump.", answer: "positive and negative head" },
+  { question: "A cylinder measures 1050 mm in height and has a diameter of 350 mm. What is its capacity?", answer: "100 litres" },
+  { question: "What is the formula for calculating the volume of a cylinder?", answer: "πr²h" },
+  { question: "What is the role of a thermostatic mixing valve?", answer: "control outlet temperature" },
+  { question: "What is the function of a tundish in an unvented system?", answer: "visible discharge point" },
+  { question: "What is the role of a pressure relief valve?", answer: "release excess pressure" },
+  { question: "What is the recommended minimum pressure for an unvented system?", answer: "1 bar" },
+  { question: "What is the function of a balanced cold connection?", answer: "equalise pressure" },
+  { question: "What is the role of a wiring centre in a hot water system?", answer: "connect controls" },
+  { question: "What is the function of a cylinder thermostat?", answer: "control water temperature" },
+  { question: "What is the purpose of a filling loop?", answer: "fill sealed system" },
+  { question: "What is the role of a check valve?", answer: "prevent backflow" },
+  { question: "What is the function of a pressure reducing valve?", answer: "limit incoming pressure" },
+  { question: "What is the role of a discharge pipe?", answer: "safely remove hot water" },
+  { question: "What is the function of a heat exchanger?", answer: "transfer heat" },
+  { question: "What is the role of an immersion heater?", answer: "heat water electrically" },
+
+  // Central Heating Systems
+  { question: "In a sealed CH system with a condensing boiler, what is the expected temperature difference between flow and return?", answer: "20°C" },
+  { question: "Which pipe allows an open vented system to remain at atmospheric pressure?", answer: "open vent pipe" },
+  { question: "Which heating system uses two two-port valves?", answer: "S-plan" },
+  { question: "What does a three-port mid-position valve do in its mid-position?", answer: "heats both circuits" },
+  { question: "Which boiler type recovers latent heat from flue gases?", answer: "condensing boiler" },
+  { question: "What is the recommended installation height for a radiator?", answer: "150mm" },
+  { question: "What component accommodates water expansion in a sealed system?", answer: "expansion vessel" },
+  { question: "What should be provided in homes over 150 m²?", answer: "zoning" },
+  { question: "What is boiler interlock?", answer: "prevents boiler cycling" },
+  { question: "What is the purpose of a room thermostat?", answer: "control room temperature" },
+  { question: "What is the function of a cylinder thermostat?", answer: "control hot water temperature" },
+  { question: "What is the role of a motorised zone valve?", answer: "control water flow" },
+  { question: "What is the function of a programmer?", answer: "schedule heating" },
+  { question: "What is the role of a wiring centre?", answer: "connect electrical components" },
+  { question: "What is the purpose of a bypass valve?", answer: "prevent overheating" },
+  { question: "What is the function of a circulating pump?", answer: "move water through system" },
+  { question
 ];
 
 let currentQuestion = 0;
@@ -171,3 +220,4 @@ function updateLeagueTable() {
 
 // --- Start Game ---
 initGame();
+
