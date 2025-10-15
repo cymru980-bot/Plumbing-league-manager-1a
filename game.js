@@ -4,16 +4,70 @@ let team = [];
 let league = { wins: 0, losses: 0, draws: 0, credits: credits };
 
 const players = [
-  { name: "Erling Haaland", cost: 50, stats: { speed: 5, agility: 4, accuracy: 5, experience: 4, skill: 5 } },
-  { name: "Bukayo Saka", cost: 40, stats: { speed: 4, agility: 5, accuracy: 4, experience: 3, skill: 4 } },
-  { name: "Virgil van Dijk", cost: 45, stats: { speed: 3, agility: 3, accuracy: 4, experience: 5, skill: 5 } },
-  { name: "Kevin De Bruyne", cost: 50, stats: { speed: 4, agility: 4, accuracy: 5, experience: 5, skill: 5 } },
-  { name: "Mo Salah", cost: 45, stats: { speed: 5, agility: 4, accuracy: 5, experience: 4, skill: 4 } },
-  { name: "Declan Rice", cost: 35, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
-  { name: "Son Heung-min", cost: 40, stats: { speed: 5, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
-  { name: "James Maddison", cost: 30, stats: { speed: 3, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
-  { name: "Phil Foden", cost: 35, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
-  { name: "Martin Ødegaard", cost: 40, stats: { speed: 3, agility: 4, accuracy: 5, experience: 4, skill: 5 } }
+  {
+    name: "Erling Haaland",
+    club: "Manchester City",
+    position: "Forward",
+    cost: 55,
+    stats: { speed: 5, agility: 4, accuracy: 5, experience: 4, skill: 5 }
+  },
+  {
+    name: "Bukayo Saka",
+    club: "Arsenal",
+    position: "Winger",
+    cost: 48,
+    stats: { speed: 5, agility: 5, accuracy: 4, experience: 4, skill: 4 }
+  },
+  {
+    name: "Virgil van Dijk",
+    club: "Liverpool",
+    position: "Defender",
+    cost: 50,
+    stats: { speed: 3, agility: 3, accuracy: 4, experience: 5, skill: 5 }
+  },
+  {
+    name: "James Maddison",
+    club: "Tottenham Hotspur",
+    position: "Midfielder",
+    cost: 42,
+    stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 }
+  },
+  {
+    name: "Bruno Fernandes",
+    club: "Manchester United",
+    position: "Midfielder",
+    cost: 47,
+    stats: { speed: 4, agility: 4, accuracy: 5, experience: 5, skill: 5 }
+  },
+  {
+    name: "Alexander Isak",
+    club: "Newcastle United",
+    position: "Forward",
+    cost: 45,
+    stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 }
+  },
+  {
+    name: "Dominic Solanke",
+    club: "Bournemouth",
+    position: "Forward",
+    cost: 38,
+    stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 }
+  },
+  {
+    name: "João Palhinha",
+    club: "Fulham",
+    position: "Midfielder",
+    cost: 40,
+    stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 }
+  },
+  {
+    name: "Morgan Gibbs-White",
+    club: "Nottingham Forest",
+    position: "Midfielder",
+    cost: 36,
+    stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 }
+  }
+  // ... continue up to 100 players
 ];
 
 // --- Plumbing Questions ---
@@ -220,4 +274,5 @@ function updateLeagueTable() {
 
 // --- Start Game ---
 initGame();
+
 
