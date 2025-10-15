@@ -4,6 +4,48 @@ let team = [];
 let league = { wins: 0, losses: 0, draws: 0, credits: credits };
 
 const players = [
+  { name: "Raheem Sterling", club: "Chelsea", position: "Winger", cost: 45, stats: { speed: 5, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Enzo Fernández", club: "Chelsea", position: "Midfielder", cost: 46, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Reece James", club: "Chelsea", position: "Defender", cost: 44, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "James Tarkowski", club: "Everton", position: "Defender", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Jordan Pickford", club: "Everton", position: "Goalkeeper", cost: 42, stats: { speed: 2, agility: 4, accuracy: 4, experience: 5, skill: 5 } },
+  { name: "Abdoulaye Doucouré", club: "Everton", position: "Midfielder", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Wilfried Gnonto", club: "Leeds United", position: "Winger", cost: 39, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Jack Harrison", club: "Leeds United", position: "Midfielder", cost: 40, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Luke Ayling", club: "Leeds United", position: "Defender", cost: 38, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "James Justin", club: "Leicester City", position: "Defender", cost: 39, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Harvey Barnes", club: "Leicester City", position: "Winger", cost: 42, stats: { speed: 5, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Kelechi Iheanacho", club: "Leicester City", position: "Forward", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Tariq Lamptey", club: "Brighton & Hove Albion", position: "Defender", cost: 40, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Lewis Dunk", club: "Brighton & Hove Albion", position: "Defender", cost: 42, stats: { speed: 3, agility: 3, accuracy: 4, experience: 5, skill: 4 } },
+  { name: "João Pedro", club: "Brighton & Hove Albion", position: "Forward", cost: 43, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Max Aarons", club: "Luton Town", position: "Defender", cost: 38, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Carlton Morris", club: "Luton Town", position: "Forward", cost: 39, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Ross Barkley", club: "Luton Town", position: "Midfielder", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Ben Mee", club: "Brentford", position: "Defender", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 5, skill: 4 } },
+  { name: "Bryan Mbeumo", club: "Brentford", position: "Forward", cost: 42, stats: { speed: 5, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Christian Nørgaard", club: "Brentford", position: "Midfielder", cost: 41, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Chris Wood", club: "Nottingham Forest", position: "Forward", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Callum Hudson-Odoi", club: "Nottingham Forest", position: "Winger", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Anthony Elanga", club: "Nottingham Forest", position: "Winger", cost: 40, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Danny Welbeck", club: "Brighton & Hove Albion", position: "Forward", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Joelinton", club: "Newcastle United", position: "Midfielder", cost: 43, stats: { speed: 4, agility: 4, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Fabian Schär", club: "Newcastle United", position: "Defender", cost: 42, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Diogo Dalot", club: "Manchester United", position: "Defender", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Alejandro Garnacho", club: "Manchester United", position: "Winger", cost: 42, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Rasmus Højlund", club: "Manchester United", position: "Forward", cost: 43, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Cole Palmer", club: "Chelsea", position: "Midfielder", cost: 42, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Nicolas Jackson", club: "Chelsea", position: "Forward", cost: 41, stats: { speed: 5, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Axel Disasi", club: "Chelsea", position: "Defender", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "João Gomes", club: "Wolves", position: "Midfielder", cost: 40, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Pedro Neto", club: "Wolves", position: "Winger", cost: 42, stats: { speed: 5, agility: 5, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Matheus Cunha", club: "Wolves", position: "Forward", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "James Trafford", club: "Burnley", position: "Goalkeeper", cost: 39, stats: { speed: 2, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Josh Brownhill", club: "Burnley", position: "Midfielder", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Zeki Amdouni", club: "Burnley", position: "Forward", cost: 40, stats: { speed: 4, agility: 4, accuracy: 4, experience: 3, skill: 4 } },
+  { name: "Tom Cairney", club: "Fulham", position: "Midfielder", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
+  { name: "Willian", club: "Fulham", position: "Winger", cost: 41, stats: { speed: 4, agility: 4, accuracy: 4, experience: 5, skill: 4 } },
+  { name: "Raúl Jiménez", club: "Fulham", position: "Forward", cost: 40, stats: { speed: 3, agility: 3, accuracy: 4, experience: 4, skill: 4 } },
   { name: "Erling Haaland", club: "Manchester City", position: "Forward", cost: 55, stats: { speed: 5, agility: 4, accuracy: 5, experience: 4, skill: 5 } },
   { name: "Kevin De Bruyne", club: "Manchester City", position: "Midfielder", cost: 54, stats: { speed: 4, agility: 4, accuracy: 5, experience: 5, skill: 5 } },
   { name: "Phil Foden", club: "Manchester City", position: "Midfielder", cost: 48, stats: { speed: 4, agility: 5, accuracy: 4, experience: 4, skill: 5 } },
@@ -240,6 +282,7 @@ function updateLeagueTable() {
 
 // --- Start Game ---
 initGame();
+
 
 
 
